@@ -1,6 +1,7 @@
 package ru.netology;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -13,6 +14,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 public class OrderCardInvalidValueTest {
 
     private WebDriver driver;
+
+    @BeforeAll
+    static void configWebDriver() {
+        System.setProperty("webdriver.chrome.driver", "./webdriver/chromedriver.exe");
+    }
 
     @BeforeEach
     void createBrowser() {
