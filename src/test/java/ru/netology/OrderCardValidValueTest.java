@@ -12,7 +12,7 @@ public class OrderCardValidValueTest {
 
     @BeforeAll
     static void configWebDriver() {
-        System.setProperty("webdriver.chrome.driver", "./webdriver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "./webdriver/linux/chromedriver");
     }
 
     @BeforeEach
