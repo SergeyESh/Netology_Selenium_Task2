@@ -8,16 +8,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class OrderCardInvalidValueTest {
 
     private WebDriver driver;
 
     @BeforeAll
-    static void configWebDriver() {
-        System.setProperty("webdriver.chrome.driver", "./webdriver/linux/chromedriver");
+    static void setupAll() {
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
