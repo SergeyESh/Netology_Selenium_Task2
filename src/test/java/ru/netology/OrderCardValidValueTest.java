@@ -23,11 +23,12 @@ public class OrderCardValidValueTest {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999");
     }
 
     @Test
     void oderCardTest() {
-        driver.get("http://localhost:9999");
+
         driver.findElement(By.cssSelector("[data-test-id = 'name'] input")).sendKeys("Иванов Иван");
         driver.findElement(By.cssSelector("[data-test-id = 'phone'] input")).sendKeys("+79163131737");
         driver.findElement(By.cssSelector("[data-test-id = 'agreement'] span")).click();
